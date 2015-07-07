@@ -1,0 +1,12 @@
+<img src="">
+
+<ol>
+  <% @movies.each do |movie| %>
+    <li>
+      <p>
+        <%= link_to movie.title, "/movies/details?id=#{movie.omdb_key}" %>
+        (<%= movie.year %>)
+      </p>
+    </li>
+  <% end %>
+</ol>
